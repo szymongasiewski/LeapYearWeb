@@ -1,0 +1,14 @@
+﻿@page
+@model LeapYearWeb.Pages.SavedModel
+@{
+    ViewData["Title"] = "Data in session";
+}
+<h1 class="display-4">Dane zapisane w sesji</h1>
+@if (Model.List != null)
+{
+    <ul class="list-group list-group-flush">
+        @foreach(string[] Arr in Model.List){
+            <li class="list-group-item">@Arr[0], @Arr[1] - rok @Arr[2] przestępny</li>
+        }
+    </ul>
+}
